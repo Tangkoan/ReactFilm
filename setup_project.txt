@@ -2,4 +2,28 @@
     > npx create-react-app ./
 
     - File public/index.html សម្រាប់ Pageដែលយើងចូលដំបូង
-    
+53. Create Git
+
+54. Dependency
+    > npm install react-router-dom
+    > npx audit fix (បើអានេះមានបញ្ហាប្រើCommand ខាងក្រោមបន្ទាប់)
+    > npm audit fix --force
+    > npm install @alan-ai/alan-sdk-web @mui/icons-material @mui/material @mui/styles @reduxjs/toolkit axios react-redux --legacy-peer-deps
+    > npm install react-scripts@5.0.1(ករណី 0.0.0 នៅត្រង់ package.json វាមាន react-scripts@0.0.0)
+
+    -- File package.json ប្ដូរទៅពីកូដខាងលើទៅខាងក្រោម
+        "scripts": {
+            "start": "react-scripts start",
+            "build": "react-scripts build",
+            "test": "react-scripts test",
+            "eject": "react-scripts eject"
+        },
+
+        => 
+
+        "scripts": {
+            "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+            "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+            "test": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts test",
+            "eject": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts eject"
+        },
