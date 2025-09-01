@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@alan-ai/alan-sdk-web": "^1.8.94",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.1",
     "@mui/material": "^7.3.1",
     "@mui/styles": "^6.5.0",

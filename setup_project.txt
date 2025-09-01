@@ -27,3 +27,63 @@
             "test": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts test",
             "eject": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts eject"
         },
+
+
+
+55. Intro & Documentation
+    
+        🕵🏽 Code : 
+                -- រៀបចំ File App.jsx ដែលមាន Ipmort របស់មួយចំនួនមកប្រើដើម្បីងាយស្រួលសរសេរកូដ
+                    import {CssBaseline} from "@mui/material";
+                    import { BrowserRouter, Routes, Route } from "react-router-dom";
+                    import Movies from "./Movies/Movies";
+                    import Actors from "./Actors/Actors";
+                    import NotFound from "./NotFound/NotFound";
+                    const App = () => {
+                        return (
+                        <div>
+                            <CssBaseline />
+                                <BrowserRouter>
+                                    <Routes>
+                                        <Route path="/" element={<Movies/>}/>
+                                        <Route path="/actors/:id" element={<Actors/>}/>
+                                        <Route path="*" element={<NotFound/>}/>
+                                    </Routes>
+                                </BrowserRouter>
+                        </div>
+                        );
+                    }
+                    export default App;
+
+                -- រៀបចំ File NotFound.jsx
+                    import React from 'react'
+                    const NotFound = () => {
+                    return (
+                        <div>
+                        <h1>Not Found</h1>
+                        </div>
+                    )
+                    }
+                    export default NotFound;
+
+                -- រៀបចំ File Actors.jsx
+                        import React from 'react'
+                        const Actors = () => {
+                        return <div>Actors Page</div>;
+                        };
+                        export default Actors;
+
+                -- រៀបចំ File Movies.jsx
+                    import { Movie } from "@mui/icons-material"
+                    const Movies = () => {
+                    return(
+                        <div>
+                            <h1>Movies Page</h1>
+                        </div>
+                    )
+                    }
+                    export default Movies;
+
+
+
+    > npm install @emotion/react @emotion/styled --legacy-peer-deps ធ្វើការ Run Command នេះមុននឹងចុចលើBrowsser ដើម្បីមើលលទ្ធផល
